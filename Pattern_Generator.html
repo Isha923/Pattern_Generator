@@ -1,0 +1,48 @@
+<!-- Write a JavaScript program to construct the following pattern, using a nested for loop.(use html file)
+*
+* *
+* * *
+* * * *
+* * * * * -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .pattern {
+            font-family: monospace;
+            white-space: pre;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Pattern Generator</h2>
+    <button onclick="generatePattern()">Generate Pattern</button>
+    <div class="pattern" id="patternOutput"></div>
+
+    <script>
+        function generatePattern() {
+            let pattern = '';
+            const rows = 5; // Number of rows for the pattern
+
+            for (let i = 1; i <= rows; i++) {
+                for (let j = 1; j <= i; j++) {
+                    pattern += '* ';
+                }
+                pattern += '\n'; // Add a new line after each row
+            }
+
+            document.getElementById('patternOutput').innerText = pattern;
+        }
+    </script>
+</body>
+</html>
